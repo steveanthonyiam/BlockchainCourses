@@ -1,5 +1,5 @@
-# SolidityCourses
-All my ressources and tutorials about Solidity
+# Blockchain Courses
+All my ressources and tutorials about blockchain devlopment
 
 
 
