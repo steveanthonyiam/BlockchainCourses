@@ -19,8 +19,17 @@ All my ressources and tutorials about blockchain devlopment
 
 - Types
 - Visibility
+- View and Pure
 - Payable
 - Guard
+- Immutable
+- Require and Revert
+- Library
+- Fallback and Receive
+- Interfaces and external contracts
+- Call 
+- Delegate Call : how to update a contract
+
 
 ## Optimisation
 
@@ -29,6 +38,7 @@ All my ressources and tutorials about blockchain devlopment
 
 ## Libraries
 
+- chainlinks : usd price, oracle
 - openzeppelin
 
 
@@ -42,6 +52,7 @@ All my ressources and tutorials about blockchain devlopment
 - Reentrancy
 - Overflow and Underflow
 - Send Ether with selfdestruct
+- Read private data
 
 ## More
 
