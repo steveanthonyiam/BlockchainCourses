@@ -11,20 +11,28 @@ You ready to code your first smartcontract ? Fantasic !
 Let's dive in the first thing you need to know about this langague, the differents kind of type. 
 
 Hi my name is Steve Anthony, welcome on my new channel Proof of dev. 
-In this video I will show you how to type your values.
 
 Roll the intro.
 
 ## Preface
 
-Alright so, in this video I will summurise the utility of each types and quiclky talk about the size used by all thoses ones. The reason for that, is because when you code in solidity you need to optimise your code, because if you don't, you will have some heavy gaz fee. And this is really important to have this in mind. I will talk more about this topic in a futur video because there is a lot to say. 
+In this video I'm going to sum up what each type is useful for in Solidity and quickly talk about the amount of memory used by each of them.
+
+The reason for that, is because you need to optimise your code. If you don't, you will have some heavy gaz fee. And this is really important to have this in mind when you choose your type. 
+
+I will talk about this subject in a future video because there is a lot to say. 
+
+
+# Remix
+
+Remix is the tool you need to use if you want to learn Solidity. 
 
 ## Boolean
 
 Let's begin with Boolean.
 
 Pretty simple, a boolean can be true or false but not null. 
-And it store in 1 byte.
+And it use 1 byte.
 
 ```solidity
     bool myBool = true;

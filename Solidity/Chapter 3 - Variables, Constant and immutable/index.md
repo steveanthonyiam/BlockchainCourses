@@ -1,17 +1,32 @@
 # Constant and immutable with solidity
 
-This is the scripted version of this youtube video, it could be useful if you just need to retrieve some info without 
-rewatching the entire video :
-
-TODO
-
-## Intro
-
-What are the differences between a constant and immutable and how to use them ? This is the topic of this video.
+In this video we are going to talk about variables, constant and immutable.
 
 Hi my name is Steve Anthony, welcome on my new channel Proof of dev. 
 
 Roll the intro.
+
+## Variables
+
+https://solidity-by-example.org/variables/
+
+There are 3 types of variables in Solidity
+
+    local
+        declared inside a function
+        not stored on the blockchain
+
+    state
+        declared outside a function
+        stored on the blockchain
+
+    global (provides information about the blockchain)
+
+
+To write or update a state variable you need to send a transaction.
+
+On the other hand, you can read state variables, for free, without any transaction fee.
+
 
 ## Constant or immutable
 
@@ -23,7 +38,8 @@ Let's take a look a the documentation :
 >
 > source : https://docs.soliditylang.org/en/v0.6.5/contracts.html#constant-and-immutable-state-variables
 
-So to be clear, you can't change the value of constant and for immutable, you can do it in the contructor if you want.
+So to be clear, you can't change the value of constant.
+For immutable, you can do it in the contructor if you want.
 
 Alright, let's see on remix.
 
