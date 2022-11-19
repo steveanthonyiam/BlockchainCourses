@@ -26,26 +26,17 @@ So if it's not christall clear :
 If your function is a View: you can read the variables stored in your contract. It's impossible to write.
 If it's Pure: you can't read any variables of the contract, everything you can use will be embeded in your function.
 
-Alright, let's see on remix.
-
-https://remix.ethereum.org/
-
-```solidity
-contract ConstantAndImmutable {
-    uint256 public constant c1 = 7894578;
-    uint256 public immutable i1;
-
-    constructor(uint256 _i1) {
-        i1 = _i1;
-    }
-}
-```
 
 About the cost of pure and view, I found an interesting thread here : 
 
 > Pure and View functions don't cost any gas to call if they're called externally from outside the contract. But they do cost gas if called internally by another function.
 > 
 > source: https://ethereum.stackexchange.com/questions/52885/view-pure-gas-usage-cost-gas-if-called-internally-by-another-function/52887#52887
+
+
+> Currently, it will not reduce gas cost when executing on the EVM. However, in the future it may help the Solidity compiler to optimize your program.
+> 
+> source: https://ethereum.stackexchange.com/questions/28504/is-there-any-profit-from-using-pure-and-view-functions-modifiers
 
 ```solidity
 pragma solidity ^0.4.24;

@@ -1,16 +1,19 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.10;
+// SPDX-License-Identifier: GPL-3.0
 
-contract ViewAndPure {
-    uint256 public x = 1;
+pragma solidity >=0.7.0 < 0.9.0;
 
-    // Promise not to modify the state.
-    function addToX(uint256 y) public view returns (uint256) {
-        return x + y;
+
+contract MyContract {
+
+    bool myBoolean = false;
+
+    function testPure() public pure returns(bool){
+        bool localBool = true;
+        return localBool;
     }
 
-    // Promise not to modify or read from the state.
-    function add(uint256 i, uint256 j) public pure returns (uint256) {
-        return i + j;
-    }
+    function testView() public view returns(bool){
+        return myBoolean;
+    } 
 }
+

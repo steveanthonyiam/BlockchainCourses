@@ -1,41 +1,32 @@
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity >=0.7.0 <0.9.0;
 
-import "hardhat/console.sol";
+pragma solidity >=0.7.0 < 0.9.0;
 
-library MyLib {
-    function sum(int256 a, int256 b) public pure returns (int256) {
-        return a + b;
+
+contract MyContract {
+
+
+    function publicFunction() public pure returns(bool){
+        return privateFunction();
+    }
+
+    function privateFunction() private pure returns(bool){
+        return internalFunction();
+    }
+
+    function internalFunction() internal pure returns(bool){
+        return true;
+    }
+
+    function externalFunction() external pure returns(bool){
+        return true;
     }
 }
 
-contract MyContract {
-    function myFirstFunction() public pure returns (uint256) {
-        uint256 number = 100;
-        return number;
+contract MyContractChild is MyContract {
+
+    function testInternalFunction() public pure returns(bool){
+        return internalFunction();
     }
 
-    function mySecondFunction(uint256 myParams)
-        public
-        pure
-        returns (uint256, uint256)
-    {
-        uint256 number = 100 + myParams;
-        return (number, myParams);
-    }
-
-    function callTheLib() public pure returns (int256) {
-        return MyLib.sum(100, 20);
-    }
-
-    using MyLib for int256;
-
-    function callTheLibTwo(int256 value) public pure returns (int256) {
-        return value.sum(100);
-    }
-
-    function callTheImport() public view returns (bool) {
-        console.log("Log it");
-        return true;
-    }
 }

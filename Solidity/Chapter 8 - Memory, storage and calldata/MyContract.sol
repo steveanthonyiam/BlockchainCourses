@@ -1,34 +1,43 @@
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity >=0.7.0 <0.9.0;
 
-contract MemoryStorageAndCalldata {
-    struct Data {
-        uint256 value;
+pragma solidity >=0.7.0 < 0.9.0;
+
+
+contract MyContract {
+
+    struct MyStruct {
+        int value;
     }
 
-    Data public myData;
+    bool myBoolean = false;
 
-    // it wont work
-    function addDataWithMemory(uint256 _value) public {
-        Data memory notAPointerToMyData = myData;
-        notAPointerToMyData.value = _value;
+    MyStruct public stateStruct;
+
+    constructor(){
+        stateStruct = MyStruct(1);
     }
 
-    // it work
-    function addDataWithStorage(uint256 _value) public {
-        Data storage pointerToMyData = myData;
-        pointerToMyData.value = _value;
+
+    function test() public{
+        MyStruct memory localStruct = stateStruct;
+        localStruct.value = 2;
+        stateStruct = localStruct;
     }
 
-    Data[] public myDataArray;
 
-    function addDataArrayWithMemory(uint256 _value) public {
-        Data memory myLocalDataArray = Data(_value);
-        myDataArray.push(myLocalDataArray);
+
+    function testCalldata(int[] memory numbers) public pure returns (int[] memory){
+        numbers[0] = 22;
+
+        return numbers;
     }
 
-    function getDataWithStorage(uint256 _index) public view returns (uint256) {
-        Data storage pointerToMyDataArray = myDataArray[_index];
-        return pointerToMyDataArray.value;
+    // impossible
+    function testCalldata(int memory number) public pure returns (int memory){
+        number = 1;
+
+        return number;
     }
+ 
 }
+
