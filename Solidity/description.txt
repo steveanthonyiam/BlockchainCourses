@@ -1,0 +1,35 @@
+I will show you the big picture of Web3 development and more specifically on Ethereum.
+
+----
+IN THIS VIDEO
+----
+
+SOLIDITY
+- Solidity: https://docs.soliditylang.org/en/latest/
+- Openzeppelin: https://www.openzeppelin.com/
+
+TOOLS
+- Remix: https://remix.ethereum.org/
+- Truffle: https://trufflesuite.com/
+- Hardhat: https://hardhat.org/
+
+TESTNETS
+- Ropsten: https://ropsten.etherscan.io/
+- Rinkeby: https://rinkeby.etherscan.io/
+- Görli: https://goerli.etherscan.io/
+
+FRONT DEV
+- ethers.js: https://docs.ethers.io/
+- web3.js: https://web3js.readthedocs.io/en/v1.8.1/
+
+----
+ABOUT ME AND PROOF OF DEV
+----
+My name is Steve Anthony and Proof Of Dev is my channel.
+I talk about blockhain and you can follow me here:
+
+- https://twitter.com/steveanthonyiam
+- https://github.com/steveanthonyiam
+- https://www.instagram.com/steveanthonyiam/
+- https://www.tiktok.com/@steveanthonyiam
+- https://medium.com/@steveanthonyiam

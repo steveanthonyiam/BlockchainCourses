@@ -13,7 +13,6 @@ Sources :
 - https://www.bitdegree.org/learn/solidity-types
 - https://blog.logrocket.com/ultimate-guide-data-types-solidity/
 - https://ethereum.stackexchange.com/a/8653
-- https://docs.soliditylang.org/en/v0.8.14/types.html#enums
 - https://docs.ethers.io/v5/api/utils/strings/#Bytes32String
 */
 contract TypesList {
@@ -92,18 +91,6 @@ contract TypesList {
     2^256 * 32 bytes
     */
     mapping(address => uint256) public myMapping;
-
-    /**
-    Enums generate user-defined Solidity types
-    The options are represented by unsigned integer values starting from 0.
-
-    Max size : 256 members
-    */
-    enum MyEnum {
-        One,
-        Two,
-        Three
-    }
 
     /**
     Kind of float or double
